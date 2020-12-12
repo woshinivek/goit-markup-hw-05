@@ -36,13 +36,13 @@
             </nav>
 
             <address class="nav-contacts">
-                <a class="title" href="mailto:info@devstudio.com">
+                <a class="nav-contacts__title" href="mailto:info@devstudio.com">
                     <svg class="contacts-icon" width="16px" height="12px">
                         <use href="./images/icons/sprite.svg#icon-envelope"></use>
                     </svg>
                     info@devstudio.com</a>
 
-                <a class="title" href="tel:+380961111111">
+                <a class="nav-contacts__title" href="tel:+380961111111">
                     <svg class="contacts-icon" width="10px" height="16px">
                         <use href="./images/icons/sprite.svg#icon-smartphone"></use>
                     </svg>
@@ -115,14 +115,23 @@
             <div class="container ">
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="service-list list">
-                    <li class="item">
-                        <img src="./images/studio/img.jpg" width="370" alt="Разработка десктопных приложений">
+                    <li class="service-list__item">
+                        <div class="service-list__image-wrp">
+                            <img src="./images/studio/img.jpg" width="370" alt="Разработка десктопных приложений">
+                            <p class="service-list__overlay">Десктопные приложения</p>
+                        </div>
                     </li>
-                    <li class="item">
-                        <img src="./images/studio/img-2.jpg" width="370" alt="Разработка мобильных приложений">
+                    <li class="service-list__item">
+                        <div class="service-list__image-wrp">
+                            <img src="./images/studio/img-2.jpg" width="370" alt="Разработка мобильных приложений">
+                            <p class="service-list__overlay">Мобильные приложения</p>
+                        </div>
                     </li>
-                    <li class="item">
-                        <img src="./images/studio/img-3.jpg" width="370" alt="Дизайнерские решения">
+                    <li class="service-list__item">
+                        <div class="service-list__image-wrp">
+                            <img src="./images/studio/img-3.jpg" width="370" alt="Дизайнерские решения">
+                            <p class="service-list__overlay">Дизайнерские решения</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -342,15 +351,15 @@
     </main>
     <footer class="footer">
         <div class="footer-wrapper container">
-            <div class="footer-contacts">
+            <div class="footer__left-side">
                 <!-- Добавлен <span> для дальнейшей стилизации цветом -->
                 <a href="./index.html" lang="en" class="footer-logo link"><span>Web</span>Studio</a>
                 <address class="address">
                     г. Киев, пр-т Леси Украинки, 26
                 </address>
                 <address class="footer-contacts">
-                    <a class="title" href="mailto:info@example.com">info@example.com</a>
-                    <a class="title" href="tel:+380991111111">+38 099 111 11 11</a>
+                    <a class="footer-contacts__title" href="mailto:info@example.com">info@example.com</a>
+                    <a class="footer-contacts__title" href="tel:+380991111111">+38 099 111 11 11</a>
                 </address>
             </div>
             <div class="footer-social">

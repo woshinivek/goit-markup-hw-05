@@ -184,7 +184,7 @@ img {
     color: var(--accent-color);
 }
 
-.site-nav__link.current::after{
+.site-nav__link.current::after {
     content: '';
     display: block;
     position: absolute;
@@ -211,7 +211,7 @@ img {
 }
 
 
-.nav-contacts .title {
+.nav-contacts__title {
     display: flex;
     align-items: center;
     padding-top: 32px;
@@ -223,6 +223,8 @@ img {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    transition: color 250ms var(--timing);
 }
 
 .contacts-icon {
@@ -230,16 +232,12 @@ img {
     fill: currentColor;
 }
 
-.nav-contacts .title:hover .contacts-icon {
+.nav-contacts__title:hover,
+.nav-contacts__title:focus {
     color: var(--accent-color);
 }
 
-.nav-contacts .title:hover,
-.nav-contacts .title:focus {
-    color: var(--accent-color);
-}
-
-.nav-contacts .title:not(:last-child) {
+.nav-contacts__title:not(:last-child) {
     margin-right: 50px;
 }
 
@@ -292,6 +290,12 @@ img {
     letter-spacing: 0.06em;
 
     cursor: pointer;
+
+    transform: scale(1);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 
 .hero-button:hover,
@@ -358,8 +362,32 @@ img {
     display: flex;
 }
 
-.service-list .item:not(:nth-child(3n)) {
+.service-list__item:not(:nth-child(3n)) {
     margin-right: 30px;
+}
+
+.service-list__image-wrp {
+    position: relative;
+}
+
+.service-list__overlay {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    left: 0;
+    bottom: 0;
+
+    color: var(--primary-white-color);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* ===== TEAM ===== */
@@ -431,6 +459,10 @@ img {
     border-radius: 50%;
 
     color: #AFB1B8;
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 
 .social-list__link:hover,
@@ -444,7 +476,44 @@ img {
     fill: currentColor;
 }
 
+/* ===== CLIENTS ====== */
 
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 90px;
+
+    color: var(--clients-logo);
+
+    border: 1px solid var(--clients-logo);
+    border-radius: 4px;
+
+    transition-property: color, border;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
+}
+
+.clients__link:hover,
+.clients__link:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.clients__icon {
+    fill: currentColor;
+}
 
 /* ===== PAGE PORTFOLIO ===== */
 
@@ -544,40 +613,7 @@ img {
     line-height: 1.87;
 }
 
-/* ===== CLIENTS ====== */
 
-.clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.clients__list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.clients__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-    height: 90px;
-
-    color: var(--clients-logo);
-
-    border: 1px solid var(--clients-logo);
-    border-radius: 4px;
-}
-
-.clients__link:hover,
-.clients__link:focus {
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-}
-
-.clients__icon {
-    fill: currentColor;
-}
 
 /* ===== FOOTER ===== */
 
@@ -610,6 +646,10 @@ img {
     align-items: baseline;
 }
 
+.footer__left-side {
+    margin-right: 70px;
+}
+
 .footer .address {
     margin-bottom: 9px;
     color: var(--primary-white-color);
@@ -622,10 +662,9 @@ img {
 .footer-contacts {
     display: flex;
     flex-direction: column;
-    margin-right: 70px;
 }
 
-.footer-contacts .title {
+.footer-contacts__title {
 
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
@@ -634,7 +673,7 @@ img {
     letter-spacing: 0.02em;
 }
 
-.footer-contacts .title:not(:last-child) {
+.footer-contacts__title:not(:last-child) {
     margin-bottom: 9px;
 }
 
@@ -672,6 +711,10 @@ img {
     background-color: rgba(255, 255, 255, 0.1);
 
     color: var(--primary-white-color);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 
 .footer-social__icon {
