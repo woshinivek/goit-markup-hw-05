@@ -571,6 +571,10 @@ img {
     transition-timing-function: var(--timing);
 }
 
+.works-list__link {
+    display: block;
+}
+
 .image-thumb {
     position: relative;
     overflow: hidden;
@@ -600,17 +604,20 @@ img {
     transition-timing-function: var(--timing);
 }
 
-.works-list__item:hover .overlay {
+.works-list__link:hover .overlay,
+.works-list__link:focus .overlay {
     transform: translateY(0%);
 }
 
-.works-list__item:hover,
-.works-list__item:focus {
+.works-list__link:hover,
+.works-list__link:focus {
     border: 1px solid var(--works-list-border);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+
 
 
 
@@ -638,6 +645,7 @@ img {
     max-width: 100%;
     font-size: 16px;
     line-height: 1.87;
+    color: var(--title-text-color);
 }
 
 .works-list__description-wrapper {
