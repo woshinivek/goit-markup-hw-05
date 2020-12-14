@@ -562,16 +562,16 @@ img {
 .works-list__item {
     flex-basis: calc(100% / 3 - 30px);
     margin: 15px;
+}
+
+.works-list__link {
+    display: block;
 
     cursor: pointer;
 
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: var(--timing);
-}
-
-.works-list__link {
-    display: block;
 }
 
 .image-thumb {
